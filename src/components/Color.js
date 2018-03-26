@@ -13,6 +13,7 @@ class Color extends React.Component {
       //get the new color from API endpoint
       fetch("http://www.colr.org/json/color/random")
         .then(result => result.json())
+        .catch(error => console.error("Error:", error))
         .then(data => {
           let newColor = data.colors[0].hex;
           this.setState({ color: "#" + newColor });
