@@ -21,10 +21,16 @@ class Color extends React.Component {
       this.setState({ color: "#000" });
     }
   };
+
+  textChange = event => {
+    event.preventDefault();
+    this.setState({ text: event.target.value });
+  };
   render() {
     return (
       <div>
         <p onClick={this.colorChange}>{this.state.text}</p>
+        <input type="text" onChange={this.textChange} />
       </div>
     );
   }
