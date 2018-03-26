@@ -21,7 +21,7 @@ class Color extends React.Component {
       this.setState({ color: "#000" });
     }
   };
-
+  //catch the input and set it to state
   textChange = event => {
     event.preventDefault();
     this.setState({ text: event.target.value });
