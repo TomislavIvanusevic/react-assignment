@@ -29,7 +29,9 @@ class Color extends React.Component {
   render() {
     return (
       <div>
-        <p onClick={this.colorChange}>{this.state.text}</p>
+        <p style={{ color: this.state.color }} onClick={this.colorChange}>
+          {this.state.text}
+        </p>
         <input type="text" onChange={this.textChange} />
       </div>
     );
